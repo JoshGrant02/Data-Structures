@@ -3,12 +3,12 @@ package joshuagrant;
 import java.util.function.BiConsumer;
 
 public class JGBinaryTree<E> {
-    private static class Node<E> {
-        private E data;
-        private Node<E> left;
-        private Node<E> right;
+    protected static class Node<E> {
+        protected E data;
+        protected Node<E> left;
+        protected Node<E> right;
 
-        public Node(E data) {
+        protected Node(E data) {
             this.data = data;
             left = null;
             right = null;
@@ -20,7 +20,7 @@ public class JGBinaryTree<E> {
         }
     }
 
-    private Node<E> root;
+    protected Node<E> root;
 
     public JGBinaryTree() {
         this(null);
@@ -81,4 +81,4 @@ public class JGBinaryTree<E> {
         });
         return sb.toString();
     }
- }
+}
